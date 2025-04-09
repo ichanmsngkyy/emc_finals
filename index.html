@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metabase Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menu</h2> 
+
+      
+      <div class="menu-item" onclick="showContent('home')">
+        Home
+      </div>
+
+      
+      <details class="dropdown">
+        <summary>User</summary>
+        <ul>
+          <li onclick="showContent('profile')">Profile</li>
+          <li onclick="showContent('settings')">Settings</li>
+          <li onclick="showContent('logout')">Logout</li>
+        </ul>
+      </details>
+
+      
+      <details class="dropdown">
+        <summary>Settings</summary>
+        <ul>
+          <li onclick="showContent('general')">General</li>
+          <li onclick="showContent('security')">Security</li>
+          <li onclick="showContent('notifications')">Notifications</li>
+        </ul>
+      </details>
+
+      
+      <details class="dropdown">
+        <summary>Filter</summary>
+        <ul>
+          <li onclick="showContent('today')">Today</li>
+          <li onclick="showContent('this-week')">This Week</li>
+          <li onclick="showContent('this-month')">This Month</li>
+        </ul>
+      </details>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Dashboard</h1>
+      </header>
+      <section id="content-area">
+        <p>Welcome to your admin dashboard! Select an option from the sidebar to view content.</p>
+        <div id="general-content" style="display: none;">
+            <h2>General Overview</h2>
+          
+            <iframe
+              src="YOUR_METABASE_EMBED_URL_HERE"
+              frameborder="0"
+              width="100%"
+              height="600px"
+              allowtransparency="true"
+            ></iframe>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
