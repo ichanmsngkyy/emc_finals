@@ -1,5 +1,6 @@
-**EMC FINALS **
+# EMC FINALS
 
-Create a dashboard system
+**Create a Dashboard System**
 
-Implement dashboard by using emmbed with javascript and utilizing iframe.
+- Implement the dashboard using JavaScript.
+- Utilize iframe for embedding.
