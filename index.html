@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Metabase Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>Menu</h2> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metabase Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Menu</h2>
 
-      
-      <div class="menu-item" onclick="showContent('home')">
-        Home
-      </div>
+        <div class="menu-item" onclick="showContent('home')">Home</div>
 
-      
-      <details class="dropdown">
-        <summary>User</summary>
-        <ul>
-          <li onclick="showContent('profile')">Profile</li>
-          <li onclick="showContent('settings')">Settings</li>
-          <li onclick="showContent('logout')">Logout</li>
-        </ul>
-      </details>
+        <details class="dropdown">
+          <summary>Sales & Revenue Performance</summary>
+          <ul>
+            <li onclick="showContent('dashboard1')">Dashboard</li>
+            <li onclick="showContent('salesPerMonth')">Sales Per Month</li>
+            <li onclick="showContent('medicineSalesPerformance')">
+              Medicine Sales Performance
+            </li>
+            <li onclick="showContent('topMedicinesByRevenue')">
+              Top Medicines by Revenue & Sales Performance
+            </li>
+          </ul>
+        </details>
 
-      
-      <details class="dropdown">
-        <summary>Settings</summary>
-        <ul>
-          <li onclick="showContent('general')">General</li>
-          <li onclick="showContent('security')">Security</li>
-          <li onclick="showContent('notifications')">Notifications</li>
-        </ul>
-      </details>
+        <details class="dropdown">
+          <summary>Patient Prescription</summary>
+          <ul>
+            <li onclick="showContent('dashboard2')">Dashboard</li>
+            <li onclick="showContent('patientPrescriptionsOverview')">
+              Patient Prescription Overview
+            </li>
+            <li onclick="showContent('medicinePrescriptionsTrends')">
+              Medicine Prescription Trends
+            </li>
+            <li onclick="showContent('patientPrescriptionBehavior')">
+              Patient Prescription Behavior
+            </li>
+          </ul>
+        </details>
 
-      
-      <details class="dropdown">
-        <summary>Filter</summary>
-        <ul>
-          <li onclick="showContent('today')">Today</li>
-          <li onclick="showContent('this-week')">This Week</li>
-          <li onclick="showContent('this-month')">This Month</li>
-        </ul>
-      </details>
-    </aside>
+        <details class="dropdown">
+          <summary>Inventory Efficiency</summary>
+          <ul>
+            <li onclick="showContent('dashboard3')">Dashboard</li>
+            <li onclick="showContent('stockUtilizationOverview')">
+              Stock Utilization Overview
+            </li>
+            <li onclick="showContent('stockDemandSupply')">
+              Stock Demand vs Supply Trends
+            </li>
+            <li onclick="showContent('medicineConsumptionTrends')">
+              Medicine Consumption & Depletion Analysis
+            </li>
+          </ul>
+        </details>
+      </aside>
 
-    <main class="main-content">
-      <header>
-        <h1>Dashboard</h1>
-      </header>
-      <section id="content-area">
-        <p>Welcome to your admin dashboard! Select an option from the sidebar to view content.</p>
-        <div id="general-content" style="display: none;">
-            <h2>General Overview</h2>
-          
-            <iframe
-              src="YOUR_METABASE_EMBED_URL_HERE"
-              frameborder="0"
-              width="100%"
-              height="600px"
-              allowtransparency="true"
-            ></iframe>
-      </section>
-    </main>
-  </div>
+      <main class="main-content">
+        <header>
+          <h1>Dashboard</h1>
+        </header>
+        <section id="content-area"></section>
+      </main>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
